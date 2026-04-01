@@ -29,7 +29,6 @@ app.use(cors({
 
 app.use(express.json());
 
-// connect db INSIDE handler safe zone
 connectDB();
 
 // routes
