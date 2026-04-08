@@ -21,5 +21,6 @@ const appointmentSchema = new mongoose.Schema({
     default: "pending",
   },
 });
+appointmentSchema.index({ datetime: 1 }, { expireAfterSeconds: 86400 }); // 1 day after appointment datetime
 
 module.exports = mongoose.model("Appointment", appointmentSchema);
